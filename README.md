@@ -1,12 +1,27 @@
 # OpenRouter Streamlit Chat Application
 
+<p align="center">
+  <img src="image/ai-chat.png" alt="AI-Chat" height="300">
+  &nbsp;&nbsp;&nbsp;
+</p>
+
 Author: AnssiO
 
 This project is a chat application built using the OpenRouter API with the "openai/gpt-oss-120b" model. It features a user-friendly interface created with Streamlit, allowing users to interact with the AI model in real time.
 
+<p align="center">
+  <img src="image/streamlit.png" alt="Streamlit" height="64">
+  &nbsp;&nbsp;&nbsp;
+  <img src="image/openrouter.png" alt="OpenRouter" height="64">
+</p>
+
+# OpenRouter Streamlit Chat
+
+Minimal Streamlit chat UI powered by OpenRouter.
 ## Table of Contents
 
 - [OpenRouter Streamlit Chat Application](#openrouter-streamlit-chat-application)
+- [OpenRouter Streamlit Chat](#openrouter-streamlit-chat)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Installation](#installation)
