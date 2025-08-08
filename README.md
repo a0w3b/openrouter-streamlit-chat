@@ -5,41 +5,36 @@
   &nbsp;&nbsp;&nbsp;
 </p>
 
-Author: AnssiO
 
-This project is a chat application built using the OpenRouter API with the "openai/gpt-oss-120b" model. It features a user-friendly interface created with Streamlit, allowing users to interact with the AI model in real time.
 
-<p align="center">
-  <img src="image/streamlit.png" alt="Streamlit" height="64">
-  &nbsp;&nbsp;&nbsp;
-  <img src="image/openrouter.png" alt="OpenRouter" height="64">
-</p>
 
-# OpenRouter Streamlit Chat
+# 🗨️ OpenRouter Streamlit Chat 
+A real‑time chat UI built with Streamlit that talks to the OpenRouter API using the powerful openai/gpt‑oss‑120b model. The project is Docker‑ready, fully configurable via environment variables, and comes with a tiny test suite.
 
-Minimal Streamlit chat UI powered by OpenRouter.
-## Table of Contents
+Author: AnssiO • a0w3b/openrouter-streamlit-chat
+
+## 📖Table of Contents 
 
 - [OpenRouter Streamlit Chat Application](#openrouter-streamlit-chat-application)
-- [OpenRouter Streamlit Chat](#openrouter-streamlit-chat)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [API Integration](#api-integration)
-  - [Testing](#testing)
-- [Docker Deployment](#docker-deployment)
-  - [Contributing](#contributing)
-  - [License](#license)
+- [🗨️ OpenRouter Streamlit Chat](#️-openrouter-streamlit-chat)
+  - [📖Table of Contents](#table-of-contents)
+  - [✨Features](#features)
+  - [⚙️Installation](#️installation)
+  - [🚀Usage](#usage)
+  - [🔌API Integration](#api-integration)
+  - [🧪Testing](#testing)
+- [🐳Docker Deployment](#docker-deployment)
+  - [🤝Contributing](#contributing)
+  - [📜License](#license)
 
-## Features
+## ✨Features 
 
 - Real-time chat interface
 - Integration with OpenRouter API for AI responses
 - User message logging
 - Environment variable management for sensitive information
 
-## Installation
+## ⚙️Installation 
 
 Windows PowerShell + Conda:
 
@@ -81,7 +76,7 @@ Windows PowerShell + Conda:
      MODEL=openai/gpt-oss-120b
      ```
 
-## Usage
+## 🚀Usage 
 
 Run the Streamlit app:
 ```
@@ -89,14 +84,14 @@ streamlit run src/app.py
 ```
 Open http://localhost:8501 in your browser.
 
-## API Integration
+## 🔌API Integration 
 
 The app uses the OpenAI SDK configured for OpenRouter in src/api/openrouter_client.py:
 - Base URL: https://openrouter.ai/api/v1
 - Model: openai/gpt-oss-120b (configurable via MODEL or OPENROUTER_MODEL)
 - Optional headers for rankings: HTTP-Referer and X-Title (config via env)
 
-## Testing
+## 🧪Testing 
 
 Run tests:
 ```
@@ -104,7 +99,7 @@ pytest -q
 ```
 
 
-# Docker Deployment
+# 🐳Docker Deployment 
 
 This guide shows how to build and run the Streamlit + OpenRouter app using:
 - Manual environment variables (no .env file)
@@ -112,7 +107,7 @@ This guide shows how to build and run the Streamlit + OpenRouter app using:
 - Docker Compose
 
 Prerequisites
-- Docker Desktop on Windows
+- Docker CLI or Docker Desktop on Windows
 - OpenRouter API key
 
 Build the image (no .env required)
@@ -147,8 +142,10 @@ docker run -d --name openrouter-chat --restart unless-stopped `
   openrouter-streamlit-chat:latest
 ```
 
-Using Docker Compose
+Using Docker Compose (recommended)
 - Create docker-compose.yml (root or reuse existing). Example below binds to localhost on the host and uses runtime env vars or a .env in the same directory.
+
+💡 Tip: Use the .env file if you plan to run the app inside Docker; the Dockerfile automatically loads it.
 
 ```yaml
 # Save as docker-compose.yml at the repository root
@@ -185,15 +182,13 @@ docker compose logs -f
 docker compose down
 ```
 
-Open the app
-- http://127.0.0.1:8501
+**Open the app**
+Open your browser at http://localhost:8501 – you should see the chat UI ready to talk to the LLM.
 
-
-## Contributing
+## 🤝Contributing 
 
 Issues and PRs are welcome.
 
-## License
+## 📜License 
 
-MIT License — see LICENSE.
-
+This project is licensed under the MIT License – see the LICENSE file for details.
